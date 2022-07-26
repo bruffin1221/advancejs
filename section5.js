@@ -77,10 +77,26 @@ moreInfoB.addEventListener("click", function(){
     <p>${myInfo.hobbies}</p>
     <p>${myInfo.goals}</p>`
 
-
 })
 
+let bruce = {
+    firstName: "Bruce",
+    lastName: "Ruffin"
+}
 
+let newBruce={
+    firstName: "Erof",
+    lastName: "Oreod"
+}
+
+
+function lifeCon(now, future){
+    console.log(this.firstName +" " +this.lastName +"'s life is " +now + " but will be " + future)
+}
+
+lifeCon.call(bruce, "sucks", "epic")
+
+lifeCon.apply(newBruce, ["frustrating", "amazing"])
 
 
 
