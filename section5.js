@@ -79,24 +79,103 @@ moreInfoB.addEventListener("click", function(){
 
 })
 
-let bruce = {
-    firstName: "Bruce",
-    lastName: "Ruffin"
+// let bruce = {
+//     firstName: "Bruce",
+//     lastName: "Ruffin"
+// }
+
+// let newBruce={
+//     firstName: "Erof",
+//     lastName: "Oreod"
+// }
+
+
+// function lifeCon(now, future){
+//     console.log(this.firstName +" " +this.lastName +"'s life is " +now + " but will be " + future)
+// }
+
+// lifeCon.call(bruce, "sucks", "epic")
+
+// lifeCon.apply(newBruce, ["frustrating", "amazing"])
+
+
+let goalBtn = document.querySelector("button#goal-button")
+goalBtn.addEventListener("click", function(){
+    
+    var firstName = document.querySelector("input#fName")
+    var lastName = document.querySelector("input#lName")
+    var goal1 = document.querySelector("input#goal1")
+    var goal2 = document.querySelector("input#goal2")
+    var goal3 = document.querySelector("input#goal3")
+    var goalList = document.querySelector("div#goal-list")
+    console.log(goalList)
+    var myName ={
+        fName: firstName.value,
+        lName: lastName.value
+    }
+    
+    let myGoalsObj = myGoals.apply(myName,[goal1.value, goal2.value, goal3.value])
+    goalList.innerHTML =
+        `<p><strong>${myGoalsObj.firstName} ${myGoalsObj.lastName}</strong></p>
+         <p>Goal 1: ${myGoalsObj.goals[0]}</p>
+         <p>Goal 2: ${myGoalsObj.goals[1]}</p>
+         <p>Goal 3: ${myGoalsObj.goals[2]}</p>
+        `   
+
+})
+
+function myGoals(goal1, goal2, goal3){
+      let goalsObj= {
+        firstName: this.fName,
+        lastName: this.lName,
+        goals: [goal1, goal2, goal3]
+      }
+  return goalsObj  
 }
 
-let newBruce={
-    firstName: "Erof",
-    lastName: "Oreod"
+// let bruce  = {
+//     firstName: "Bruce",
+//     lastName: "Ruffin"
+// }
+
+// function newValues(value1, value2){
+//     console.log(this.firstName, this.lastName, value1, value2)
+// }
+
+// let bruceValue = newValues.bind(bruce, "becoming financially independent", "traveling" )
+// bruceValue()
+function steps( step1, step2, step3){
+    let stepsObj= {
+        goal: this.goal, 
+        stepOne: step1, 
+        stepTwo: step2, 
+        stepThree: step3}
+    return stepsObj
 }
 
+var stepsBtn = document.querySelector("button#steps-button")
+stepsBtn.addEventListener("click", function(){
+  
+    var myGoal = document.querySelector("input#the-goal")
+    var steps1 = document.querySelector("input#step1")
+    var steps2 = document.querySelector("input#step2")
+    var steps3 = document.querySelector("input#step3")
+    var thePlan = document.querySelector("div#the-plan")
+    
+    let theGoal={
+        goal: myGoal.value
+    }
 
-function lifeCon(now, future){
-    console.log(this.firstName +" " +this.lastName +"'s life is " +now + " but will be " + future)
-}
+    theSteps = steps.bind(theGoal, steps1.value, steps2.value, steps3.value)
+    let mySteps = theSteps()
 
-lifeCon.call(bruce, "sucks", "epic")
-
-lifeCon.apply(newBruce, ["frustrating", "amazing"])
+    thePlan.innerHTML = `
+    <p><strong>${mySteps.goal}</strong></p> 
+    <p>Step One: ${mySteps.stepOne}</p>
+    <p>Step Two: ${mySteps.stepTwo}</p>
+    <p>Step Three: ${mySteps.stepThree}</p>`
+    
+})
 
 
 
