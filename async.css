@@ -1,0 +1,127 @@
+body{
+    background: black
+}
+
+#passionate-work{
+
+    position: relative;
+    background: url(office.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: white;
+    border: 2px solid white;
+    width: 500px;
+    height: 600px;
+    left: 10%;
+    float: left
+
+}
+
+#work-form{
+    position: relative;
+    top: 8%;
+    left: 10%;
+    background: black;
+    color: white;
+    box-sizing: border-box;
+    width: 80%;
+    height: 80%;
+    opacity: .7
+    
+}
+
+label{
+    position: relative;
+    top: 10%;
+    left: 30%
+
+}
+
+input{
+    position: relative;
+    top: 10%;
+    left: 30%
+
+}
+
+button{  
+    position: relative;
+    top: 10%;
+    left: 38%
+}
+
+#establish-values{
+    background: url(working.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+    top: 30%;
+    background-size: 100% 100%;
+    color: white;
+    border: 2px white solid;
+    width: 600px;
+    height: 700px;
+    float: right;
+    right: 1%
+}
+
+.create-values{
+    position: relative;
+    left: 5%;
+    background: white;
+    color: black;
+    box-sizing: border-box;
+    border: 2px black solid;
+    opacity: .8;
+    height: 48%;
+    width: 90%
+    
+}
+
+.create-values h1, h2, p{
+    text-align: center
+}
+
+.live-values:hover{
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline
+}
+
+.define-values{
+    position: relative;
+    left: 5%;
+    background: white;
+    color: black;
+    box-sizing: border-box;
+    border: 2px black solid;
+    opacity: .8;
+    height: 48%;
+    width: 90%
+    
+}
+
+.define-values h2, p{
+    text-align: center
+    
+}
+
+.pursuing{
+    position: relative;
+    top: 5%;
+    left: 5%;
+    background: white;
+    color: black;
+    box-sizing: border-box;
+    border: 2px black solid;
+    opacity: .8;
+    height: 40%;
+    width: 90%
+    
+}
+
+.pursuing p{
+    position: relative;
+    top: 20%;
+    text-align: center
+}
+
