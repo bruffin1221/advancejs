@@ -1,0 +1,163 @@
+body{
+    background: black
+}
+#container{
+
+    width: 775px;
+    float: left
+}
+
+#values{
+    
+    height: 325px;
+    width: 750px;
+    background: silver;
+    border: 2px gold solid;
+    border-radius: 30px;
+    
+}
+
+#values h2{
+    text-align: center
+}
+
+#goals{
+    position: relative;
+    top: 20px;
+    height: 325px;
+    width: 750px;
+    background: silver;
+    border: 2px gold solid;
+    border-radius: 30px;
+    
+}
+
+#goals h2{
+    text-align: center
+}
+
+#actions{
+
+    float: right;
+    height: 700px;
+    width: 650px;
+    background: silver;
+    border: 2px gold solid;
+    border-radius: 30px;
+}
+
+#actions h2{
+    text-align: center;
+}
+
+button#create-values{
+
+    position: relative;
+    left: 280px;
+    border: 1px gold solid;
+    border-radius: 10px;
+}
+
+button#values-list{
+
+    position: relative;
+    left: 290px;
+    border: 1px gold solid;
+    border-radius: 10px;
+}
+
+div.value-form{
+    position: relative;
+    margin-top: 2%;
+    left: 37%
+}
+
+.value-form label:first-of-type{
+    margin-left: 92px
+
+}
+
+.value-form label:last-of-type{
+    margin-left: 80px
+
+}
+
+.value-form input[type="text"], textarea{
+   background: gold;
+   
+}
+
+.value-form input[type="text"]{
+    width: 235px
+}
+
+button.make-value{
+
+    position: relative;
+    left: 60px;
+    width: 100px;
+    border: 1px gold solid;
+    border-radius: 10px;
+}
+
+.display-myLife{
+    box-sizing: border-box;
+    width: 80%;
+    position: relative;
+    left: 10%;
+    text-align: center
+     
+}
+
+.display-myLife p:first-child{
+    font-size: 175%;
+    font-weight: 600;
+    margin-bottom: 7px
+}
+
+.display-myLife p:nth-child(2){
+    margin-top: 7px
+}
+
+button.submit-myLife{
+    border: 1px gold solid;
+    border-radius: 10px;
+    width: 75px
+}
+
+.submit-myLife{
+    border: 1px gold solid;
+    border-radius: 10px;
+    width: 75px
+}
+
+.display-myLife p:last-child{
+   color: blue;
+   font-size:75%
+}
+
+.display-myLife p:last-child:hover{
+    text-decoration: underline;
+    cursor: pointer
+}
+
+.ul-val{
+    position: relative;
+    box-sizing: border-box;
+    width: 50%;
+    left: 40%
+}
+
+
+.li-val{
+    list-style: none;
+    margin-bottom: 5px
+}
+
+.li-val:hover{
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer
+}
+
+
