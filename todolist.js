@@ -95,17 +95,103 @@ var todoPage=(function(){
             var valArray = JSON.parse(localStorage.getItem("valueArr")) 
             var number = parseInt(e.target.firstElementChild.value)-1
             var val = valArray[number]
+            
             page.divCreate.innerHTML=`
             <div id="display-myLife">
+            <input type="hidden" id="index" value="${number}">
              <p>${val.value}</p>
              <p>${val.description}</p>
-             <button id="update-list">Update Value</button>
+             <button class="update-list">Update Value</button>
              <button id="add-goals">Add Goals</button>
              <br>
-             <br>
-             <p id="return-values">Return</p>
+             <p class="return-values">Return</p>
             </div>
             `
+        }
+        if(e.target.classList.contains("return-values")){
+          
+            page.divCreate.innerHTML=" "
+
+            var ul = document.createElement("ul")
+            ul.classList.add("ul-val")
+            page.divCreate.appendChild(ul)
+     
+            var valArray = JSON.parse(localStorage.getItem("valueArr"))
+            for( var i = 0; i<valArray.length; i++){
+             var index = i+1
+     
+             var li = document.createElement("li")
+             li.classList.add("li-val")
+             var valText = document.createTextNode(valArray[i].value)
+             li.appendChild(valText)
+     
+             var hidInput = document.createElement("input")
+             hidInput.setAttribute("type", "hidden")
+             hidInput.setAttribute("value", index)
+             hidInput.setAttribute("id", "index")
+             li.appendChild(hidInput)
+             ul.appendChild(li)
+            }
+        }
+        if(e.target.classList.contains("update-list")){
+            var valArray = JSON.parse(localStorage.getItem("valueArr"))
+            var num = document.querySelector("input#index").value
+
+            var theValue = valArray[num].value
+            var theDescription = valArray[num].description
+
+            page.divCreate.innerHTML=`
+            <div class="update-form">
+              <label for="theValue">Value</label>
+              <input type="hidden" id="number" value="${num}">
+              <br>
+              <input type="text" name="theValue" value="${theValue}"id="theValue">
+              <br>
+              <label for="theDescription">Description</label>
+              <br>
+              <textarea name="theDescription" id="theDescription" cols="30" rows="5">${theDescription}</textarea>
+              <br>
+              <button class="update-button">Update Value</button>
+            <div>`
+
+        }
+        if(e.target.classList.contains("update-button")){
+           var inputNum = document.querySelector("input#number").value
+           var inputValue = document.querySelector("input#theValue").value
+           var inDescription = document.querySelector("textarea#theDescription").value
+
+           var valArr = JSON.parse(localStorage.getItem("valueArr"))
+           valArr[inputNum].value = inputValue
+           valArr[inputNum].description =  inDescription
+
+           var value = valArr[inputNum].value
+           var description = valArr[inputNum].description
+
+           page.divCreate.innerHTML=`
+            <div id="update-myLife">
+              <input type="hidden" id="index" value="${inputNum}">
+               <p>${value}</p>
+               <p>${description}</p>
+               <button class="update-myValue">Submit</button>
+               <br>
+               <p class="return-update">Return</p>
+            </div>
+           `    
+        }
+        if(e.target.classList.contains("update-myValue")){
+           var inputHidden = document.querySelector("input#index").value
+           var firstP = e.target.parentElement.firstElementChild.nextElementSibling.innerText
+           var secondP = e.target.parentElement.firstElementChild.nextElementSibling.nextElementSibling.innerText
+
+           var valArr = JSON.parse(localStorage.getItem("valueArr"))
+           valArr[inputHidden].value = firstP
+           valArr[inputHidden].description = secondP
+
+           localStorage.setItem("valueArr", JSON.stringify(valArr))   
+        }
+        if(e.target.classList.contains("return-update")){
+            
+           
         }
     })
     page. divList.addEventListener("click", function(){

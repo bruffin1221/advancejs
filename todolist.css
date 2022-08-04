@@ -160,4 +160,114 @@ button.submit-myLife{
     cursor: pointer
 }
 
+#display-myLife p{
+    text-align: center
+}
 
+#display-myLife p:first-child{
+   font-size: 150%;
+   font-weight: 600;
+   margin-bottom: 0px
+}
+
+#display-myLife p:nth-child(2){
+    font-size: 120%;
+    font-weight: 500;
+    margin-top: 10px
+ }
+
+ #display-myLife p:last-child{
+    font-size: 75%;
+    color: blue;
+    
+ }
+
+ #display-myLife p:last-child:hover{
+    text-decoration: underline;
+    cursor: pointer
+ }
+
+ .update-list{
+    margin-left: 38%;
+    border: 1px gold solid;
+    border-radius: 10px;
+}
+
+#add-goals{
+    margin-left: 1%;
+    border: 1px gold solid;
+    border-radius: 10px;
+}
+
+div.update-form{
+    position: relative;
+    margin-top: 2%;
+    left: 37%
+}
+
+.update-form label:first-of-type{
+    margin-left: 92px
+
+}
+
+.update-form label:last-of-type{
+    margin-left: 80px
+
+}
+
+.update-form input[type="text"], textarea{
+   background: gold;
+   
+}
+
+.update-form input[type="text"]{
+    width: 235px
+}
+
+button.update-button{
+
+    position: relative;
+    left: 60px;
+    width: 100px;
+    border: 1px gold solid;
+    border-radius: 10px;
+}
+
+#update-myLife{
+    box-sizing: border-box;
+    width: 80%;
+    position: relative;
+    left: 10%;
+    text-align: center
+}
+
+#update-myLife p:first-child{
+    font-size: 150%;
+    font-weight: 600;
+    margin-bottom: 0px
+ }
+ 
+ #update-myLife p:nth-child(2){
+     font-size: 120%;
+     font-weight: 500;
+     margin-top: 10px
+  }
+ 
+  #update-myLife p:last-child{
+     font-size: 75%;
+     color: blue;
+     
+  }
+ 
+  #update-myLife p:last-child:hover{
+     text-decoration: underline;
+     cursor: pointer
+  }
+
+  button.update-myValue{
+
+    position: relative;
+    width: 100px;
+    border: 1px gold solid;
+    border-radius: 10px;
+}
