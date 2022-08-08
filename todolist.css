@@ -193,7 +193,7 @@ button.submit-myLife{
     border-radius: 10px;
 }
 
-#add-goals{
+.add-goals{
     margin-left: 1%;
     border: 1px gold solid;
     border-radius: 10px;
@@ -268,6 +268,80 @@ button.update-button{
 
     position: relative;
     width: 100px;
+    border: 1px gold solid;
+    border-radius: 10px;
+}
+
+.center{
+    text-align: center
+}
+
+div.goal-form{
+    position: relative;
+    margin-top: 2%;
+    left: 37%
+}
+
+.goal-form label:first-of-type{
+    margin-left: 92px
+
+}
+
+.goal-form label:last-of-type{
+    margin-left: 80px
+
+}
+
+.goal-form input[type="text"], textarea{
+   background: gold;
+   
+}
+
+.goal-form input[type="text"]{
+    width: 235px
+}
+
+button.goal-button{
+
+    position: relative;
+    left: 60px;
+    width: 100px;
+    border: 1px gold solid;
+    border-radius: 10px;
+}
+
+#double-check p{
+    text-align: center
+}
+
+#double-check p:first-child{
+   font-size: 150%;
+   font-weight: 600;
+   margin-bottom: 0px
+}
+
+#double-check p:nth-child(2){
+    font-size: 120%;
+    font-weight: 500;
+    margin-top: 10px
+ }
+
+ #double-check p:last-child{
+    font-size: 75%;
+    color: blue;
+    
+ }
+
+ #double-check p:last-child:hover{
+    text-decoration: underline;
+    cursor: pointer
+ }
+
+ button.submit-goal{
+
+    position: relative;
+    width: 100px;
+    left: 44%;
     border: 1px gold solid;
     border-radius: 10px;
 }
